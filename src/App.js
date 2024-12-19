@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
-function App() {
+/*function App() {
+}*/
+
+const App = () => {
+  let myName = "Amin";
+  let student = [
+    { name: "sara", family: "amini" },
+    { name: "mina", family: "miladi"}
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="text-primary">{myName}</h1>
+      <p className="bg-danger">Hello World</p>
+      {/* <p>Hello World</p> */}
+      <hr />
+      <img />
+      {
+        student.map(std=>(
+          <p>{std.name}</p>
+        ))
+      }
     </div>
   );
-}
+};
 
 export default App;
